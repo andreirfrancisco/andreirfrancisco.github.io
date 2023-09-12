@@ -1,0 +1,19 @@
+<!-- other_file.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page Title</title>
+    <script>
+        // Fetch and insert content from all_sites.html
+        fetch('../organize_site/all_sites.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('common-content').innerHTML = data);
+    </script>
+</head>
+<body>
+    <!-- Include a container for the common content -->
+    <div id="common-content"></div>
+    
+    <!-- Your content here -->
+</body>
+</html>
