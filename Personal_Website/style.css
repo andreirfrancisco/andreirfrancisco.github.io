@@ -1,0 +1,55 @@
+/* File 2 */
+.topnav ul, .hort {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav li, .hort li {
+  float: left;
+}
+
+.topnav a, .hort a {
+  display: block;
+  color: rgb(23, 112, 105);
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover, .hort a:hover:not(.active) {
+  background-color: white;
+}
+
+.hort { 
+  float: left;
+  background-color: #333;
+  width: 25%;
+  height: 100%;
+  overflow: auto; 
+}
+
+.hort a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .hort li.right, 
+  .hort ul {float: none;}
+}
+
+.button li {
+   color:#04AA6D;
+   
+}
+
+
+
+body, html {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  height: 100%;
+  margin: 0;
+  background-color: lightblue;
+}
