@@ -1,55 +1,96 @@
 /* File 2 */
-.topnav ul, .hort {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+.topnav ul {
+    position: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
-.topnav li, .hort li {
-  float: left;
+.topnav li {
+    float: left;
 }
 
-.topnav a, .hort a {
-  display: block;
-  color: rgb(23, 112, 105);
-  padding: 8px 16px;
-  text-decoration: none;
+.topnav a {
+    display: block;
+    color: rgb(23, 112, 105);
+    padding: 8px 16px;
+    text-decoration: none;
 }
 
 .topnav a:hover, .hort a:hover:not(.active) {
-  background-color: white;
+    background-color: greenyellow;
 }
 
-.hort { 
-  float: left;
-  background-color: #333;
-  width: 25%;
-  height: 100%;
-  overflow: auto; 
+
+.hortnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+     width: 10%; /* Set width of the horizontal navigation bar */
+    float: left; /* Float the navigation bar to the left */
 }
 
-.hort a.active {
-  background-color: #04AA6D;
-  color: white;
+.hortnav li {
+    float: none;
 }
+
+.hortnav a {
+    display: block;
+    color: rgb(23, 112, 105);
+    padding: 8px 16px;
+    text-decoration: none;
+    width : 10%; 
+}
+
+.hortnav a:hover, .hort a:hover:not(.active) {
+    background-color: greenyellow;
+}
+
+/* Style the first and last items */
+.topnav li:first-child a {
+    background-color: red; /* Change the background color for the first item */
+    color: white; /* Change the text color for the first item */
+}
+
+.topnav li:last-child a {
+    background-color: blue; /* Change the background color for the last item */
+    color: white; /* Change the text color for the last item */
+   position: right;
+}
+
+.main-content {
+    margin-left: 10%; /* Set margin to leave space for the navigation bar */
+}
+
+
 
 @media screen and (max-width: 600px) {
-  .hort li.right, 
-  .hort ul {float: none;}
+    .topnav li , .hortnav li  {
+        text-align: center;
+        float: none; /* Remove the float */
+    }
+
+    .topnav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .topnav a {
+        text-align: center; /* Center the text */
+    }
+    .hortnav ul { 
+        width: none; /* Set width of the navigation bar */
+    float: none; /* Float the navigation bar to the left */
+    }
+    .main-content { 
+        text-align: center; 
+    }
 }
 
-.button li {
-   color:#04AA6D;
-   
-}
-
-
-
-body, html {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  height: 100%;
-  margin: 0;
-  background-color: lightblue;
+body { 
+    background-color:  #333;
 }
