@@ -1,4 +1,5 @@
-/* File 2 */
+
+/* Top Nav */
 .topnav ul {
     position: center;
     list-style-type: none;
@@ -6,6 +7,8 @@
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    width : 100%;
+    position:sticky;
 }
 
 .topnav li {
@@ -23,34 +26,7 @@
     background-color: greenyellow;
 }
 
-
-.hortnav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-     width: 10%; /* Set width of the horizontal navigation bar */
-    float: left; /* Float the navigation bar to the left */
-}
-
-.hortnav li {
-    float: none;
-}
-
-.hortnav a {
-    display: block;
-    color: rgb(23, 112, 105);
-    padding: 8px 16px;
-    text-decoration: none;
-    width : 10%; 
-}
-
-.hortnav a:hover, .hort a:hover:not(.active) {
-    background-color: greenyellow;
-}
-
-/* Style the first and last items */
+/* For Top Nav Buttons*/
 .topnav li:first-child a {
     background-color: red; /* Change the background color for the first item */
     color: white; /* Change the text color for the first item */
@@ -61,35 +37,89 @@
     color: white; /* Change the text color for the last item */
    position: right;
 }
+.topnav li.active a {
+    background-color: black;/* Your desired background color */;
+    color:greenyellow /* Your desired text color */;
+}
+
+
+/* Hort nav buttons */
+
+.hortnav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 20%;
+    float: left; 
+}
+
+.hortnav li {
+    float: none;
+}
+
+.hortnav a {
+    display: block;
+    color: rgb(23, 112, 105);
+    padding: 8px 16px;
+    text-decoration: none; 
+}
+
+.hortnav a:hover, .hort a:hover:not(.active) {
+    background-color: greenyellow;
+}
 
 .main-content {
     margin-left: 10%; /* Set margin to leave space for the navigation bar */
 }
 
-
+ /* For Media  */
 
 @media screen and (max-width: 600px) {
-    .topnav li , .hortnav li  {
-        text-align: center;
-        float: none; /* Remove the float */
-    }
-
-    .topnav {
+    .topnav ul,
+    .hortnav ul {
         display: flex;
         flex-direction: column;
+        align-items: center; /* Center items */
+        width: 100%; /* Full width */
+        background-color: #333; /* Background color for both navbars */
     }
 
-    .topnav a {
+    .topnav li,
+    .hortnav li {
+        width: 100%; /* Full width for list items */
+        float: none;
         text-align: center; /* Center the text */
     }
-    .hortnav ul { 
-        width: none; /* Set width of the navigation bar */
-    float: none; /* Float the navigation bar to the left */
+
+    .topnav a,
+    .hortnav a {
+        width: 100%; /* Full width for links */
+        padding: 8px 0; /* Adjust padding */
+        box-sizing: border-box; /* Include padding in width */
     }
-    .main-content { 
-        text-align: center; 
+
+    .topnav a:hover,
+    .hortnav a:hover:not(.active) {
+        background-color: greenyellow;
+    }
+
+    .topnav li:first-child a {
+        background-color: red;
+    }
+
+    .topnav li:last-child a {
+        background-color: blue;
+    }
+
+    .main-content {
+        margin-left: 0; /* Remove margin */
+        text-align: center;
     }
 }
+
+
+/* Extra  */ 
 
 body { 
     background-color:  #333;
