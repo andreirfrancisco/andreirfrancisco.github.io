@@ -1,45 +1,57 @@
 
 /* Top Nav */
+/* styles.css */
+* {
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+.topnav {
+    background-color: #45a049;
+    overflow: hidden;
+    position: fixed; /* Add this line */
+    width: 100%; /* Add this line to make it span the full width */
+    top: 0; /* Add this line to position it at the top */
+}
+
 .topnav ul {
-    position: center;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    width : 100%;
-    position:sticky;
-}
+    display: flex;
+    justify-content: space-between;
 
+}
 .topnav li {
-    float: left;
+    display: inline-block; /* Display the list items inline */
+    flex: 1; /* Added this line */
+    box-sizing: border-box; /* Added this line */   
 }
-
 .topnav a {
     display: block;
-    color: rgb(23, 112, 105);
-    padding: 8px 16px;
+    color: black;
+    padding: auto;
     text-decoration: none;
+    text-align: center; /* Center the text */
+    padding:10px; 
+    width: 100%; /* Added this line */
+    box-sizing: border-box; /* Added this line */
+    padding-bottom: 10px;
+    height: 100%; /* Added this line */
 }
-
-.topnav a:hover, .hort a:hover:not(.active) {
-    background-color: greenyellow;
+.topnav a:hover {
+    background-color:crimson;
 }
-
-/* For Top Nav Buttons*/
-.topnav li:first-child a {
-    background-color: red; /* Change the background color for the first item */
-    color: white; /* Change the text color for the first item */
+.topnav a.active{
+    background-color:crimson;
 }
-
 .topnav li:last-child a {
-    background-color: blue; /* Change the background color for the last item */
-    color: white; /* Change the text color for the last item */
-   position: right;
+    margin-left: auto;
+    float:right;
 }
+
 .topnav li.active a {
-    background-color: black;/* Your desired background color */;
-    color:greenyellow /* Your desired text color */;
+    background-color: black;
+    color:darkred;
 }
 
 
@@ -50,78 +62,150 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    width: 20%;
-    float: left; 
+    width: 16.6%;
+    float: left;
+    background-color: gray;
+    height: max-content;
+    border:#45a049;
 }
-
 .hortnav li {
     float: none;
+    height:max-content;
 }
-
 .hortnav a {
     display: block;
-    color: rgb(23, 112, 105);
-    padding: 8px 16px;
-    text-decoration: none; 
+    color: black;
+    padding: 10%;
+    text-decoration: none;     
 }
-
 .hortnav a:hover, .hort a:hover:not(.active) {
-    background-color: greenyellow;
+    background-color:crimson;
 }
-
 .main-content {
-    margin-left: 10%; /* Set margin to leave space for the navigation bar */
+    width:100%;
+    float: left;
+    padding: 5%;
+    border: 1px solid green;
+    padding-top: 10px;
+  }
+  /* Content */
+.main-content p , h1{ 
+    color : white;
+}
+.main-content-2 {
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 15px;
+    padding: 15px;
+  }
+.main-content p , h1{ 
+    color : white;
+    text-align:center;
+}
+ /* For cleaning pandas dataframes */
+ input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    outline: none;
+  }
+  
+  input[type=text]:focus {
+    background-color: lightblue;
+  }
+
+ select {
+    width: 100%;
+    padding: 2% 3%;
+    margin: 4px 0;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    outline: none;
+  }
+label{
+    color :rgb(23, 112, 105);
 }
 
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  /* For cleaning pandas dataframes */
  /* For Media  */
 
-@media screen and (max-width: 600px) {
-    .topnav ul,
-    .hortnav ul {
+@media screen and (max-width: 500px) {
+    .topnav {
+        position: static; /* Keep fixed positioning */
+        top: 0; /* Ensure it's at the very top */
+    }
+
+    body{
+        margin-top: 90px;
+    }
+    .topnav ul{ 
+        margin-top: none;
+        padding-top: none;
+        border-top: none;
+    }
+    .topnav ul,.hortnav ul, main-content {
         display: flex;
         flex-direction: column;
         align-items: center; /* Center items */
         width: 100%; /* Full width */
         background-color: #333; /* Background color for both navbars */
     }
-
-    .topnav li,
-    .hortnav li {
+    .topnav li, .hortnav li , .main-content, .main-content-2 {
         width: 100%; /* Full width for list items */
         float: none;
         text-align: center; /* Center the text */
+        
     }
-
-    .topnav a,
-    .hortnav a {
+    .topnav a,.hortnav a, .main-content-2  {
         width: 100%; /* Full width for links */
-        padding: 8px 0; /* Adjust padding */
+        padding: 8px 16px; /* Adjust padding */
         box-sizing: border-box; /* Include padding in width */
+        margin-bottom: 10px;
     }
-
     .topnav a:hover,
-    .hortnav a:hover:not(.active) {
-        background-color: greenyellow;
+    .hortnav a:hover:not(.active), .main-content-2, label , form   {
+        background-color: #45a049;
     }
-
-    .topnav li:first-child a {
-        background-color: red;
-    }
-
-    .topnav li:last-child a {
-        background-color: blue;
-    }
-
-    .main-content {
-        margin-left: 0; /* Remove margin */
+    label,form  { 
         text-align: center;
     }
+    
+    .main-content-2 {
+        text-align: left;
+        margin-bottom: 20px; /* Add some space between the form and the heading */
+    }
+    .main-content{
+        border-top: 10px;
+        padding-top: 0;
+    }
+    .main-content-2 h1 {
+        margin-top: 0; /* Remove default margin on h1 */
+    }
 }
-
 
 /* Extra  */ 
 
 body { 
-margin:0;
+    margin: 0%;
     background-color:  #333;
+    padding-top: 30px; /* Add padding for the topnav */
 }
