@@ -1,134 +1,141 @@
-
-/* Top Nav */
-/* styles.css */
+/* Global Styles */
 * {
     box-sizing: border-box;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-  }
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Top Nav Styles */
 .topnav {
     background-color: #45a049;
-    overflow: hidden;
-    position: fixed; /* Add this line */
-    width: 100%; /* Add this line to make it span the full width */
-    top: 0; /* Add this line to position it at the top */
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .topnav ul {
     list-style-type: none;
+    width: 100%;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: space-between;
+    display: flex ;
+}
 
-}
 .topnav li {
-    display: inline-block; /* Display the list items inline */
-    flex: 1; /* Added this line */
-    box-sizing: border-box; /* Added this line */   
+    flex: auto;
+    box-sizing: border-box;
 }
+
 .topnav a {
     display: block;
     color: black;
-    padding: auto;
     text-decoration: none;
-    text-align: center; /* Center the text */
-    padding:10px; 
-    width: 100%; /* Added this line */
-    box-sizing: border-box; /* Added this line */
-    padding-bottom: 10px;
-    height: 100%; /* Added this line */
-}
-.topnav a:hover {
-    background-color:crimson;
-}
-.topnav a.active{
-    background-color:crimson;
-}
-.topnav li:last-child a {
-    margin-left: auto;
-    float:right;
-}
-
-.topnav li.active a {
-    background-color: black;
-    color:darkred;
-}
-
-
-/* Hort nav buttons */
-
-.hortnav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    width: 16.6%;
-    float: left;
-    background-color: gray;
-    height: max-content;
-    border:#45a049;
-}
-.hortnav li {
-    float: none;
-    height:max-content;
-}
-.hortnav a {
-    display: block;
-    color: black;
-    padding: 10%;
-    text-decoration: none;     
-}
-.hortnav a:hover, .hort a:hover:not(.active) {
-    background-color:crimson;
-}
-.main-content {
-    width:100%;
-    float: left;
-    padding: 5%;
-    border: 1px solid green;
-    padding-top: 10px;
-  }
-  /* Content */
-.main-content p , h1{ 
-    color : white;
-}
-.main-content-2 {
-    width: 50%;
-    height: 100%;
-    float: left;
-    padding: 15px;
-    padding: 15px;
-  }
-.main-content p , h1{ 
-    color : white;
-    text-align:center;
-}
- /* For cleaning pandas dataframes */
- input[type=text] {
+    text-align: center;
+    padding: 10px;
     width: 100%;
-    padding: 12px 20px;
+}
+
+.topnav a.active {
+    background-color: crimson;
+}
+
+.topnav a:hover {
+    background-color: crimson;
+}
+
+@media screen and (max-width: 500px) {
+    /* Styles for topnav */
+    .topnav {
+        position: static;
+        width: 100%;
+        background-color: #333;
+        float: none;
+        top:0;
+    }
+
+    .topnav ul {
+        list-style-type: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        height: max-content;
+        background-color: #333;
+        position: none;
+        width: 100%;
+        background-color: #333;
+        margin: 0;
+    }
+
+    .topnav li {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+
+    .topnav a {
+        width: 100%;
+    }
+
+    .topnav a:hover,
+    .topnav a.active {
+        background-color: crimson;
+    }
+}
+
+/* Main Content Styles */
+
+
+.main-content p, h1 {
+    color: white;
+}
+
+.main-content-2 {
+   width: 50%;
+   float: left;
+   height: max-content;
+}
+
+
+.main-content-2 p, h1 {
+    color: white;
+    text-align: center;
+}
+
+/* Input Styles */
+input[type=text] {
+    width: 100%;
+    padding: 12px 12px;
     margin: 8px 0;
     box-sizing: border-box;
     border: 1px solid #555;
     outline: none;
-  }
-  
-  input[type=text]:focus {
-    background-color: lightblue;
-  }
+}
 
- select {
+input[type=text]:focus {
+    background-color: lightblue;
+}
+
+select {
     width: 100%;
-    padding: 2% 3%;
+    padding: 2% 2%;
     margin: 4px 0;
     box-sizing: border-box;
     border: 1px solid #555;
     outline: none;
-  }
-label{
-    color :rgb(23, 112, 105);
 }
 
+label {
+    color: rgb(23, 112, 105);
+    text-align: center;
+}
+/* At 300 zoom adjust padding */
+.code_chunk {
+    border: 3px solid rebeccapurple;
+    font-size: small;
+    color:aliceblue;
+    height:100%;
+}
+
+/* Button Styles */
 .button {
     background-color: #4CAF50;
     border: none;
@@ -140,72 +147,40 @@ label{
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-  }
-  input[type=submit]:hover {
+}
+
+input[type=submit]:hover {
     background-color: #45a049;
-  }
+}
 
-  /* For cleaning pandas dataframes */
- /* For Media  */
-
+/* Media Query for Small Screens */
 @media screen and (max-width: 500px) {
-    .topnav {
-        position: static; /* Keep fixed positioning */
-        top: 0; /* Ensure it's at the very top */
+    /* Styles for main-content and main-content-2 */
+    .main-content,
+    .main-content-2 {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+        padding: 10px;
     }
 
-    body{
-        margin-top: 90px;
-    }
-    .topnav ul{ 
-        margin-top: none;
-        padding-top: none;
-        border-top: none;
-    }
-    .topnav ul,.hortnav ul, main-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center items */
-        width: 100%; /* Full width */
-        background-color: #333; /* Background color for both navbars */
-    }
-    .topnav li, .hortnav li , .main-content, .main-content-2 {
-        width: 100%; /* Full width for list items */
-        float: none;
-        text-align: center; /* Center the text */
-        
-    }
-    .topnav a,.hortnav a, .main-content-2  {
-        width: 100%; /* Full width for links */
-        padding: 8px 16px; /* Adjust padding */
-        box-sizing: border-box; /* Include padding in width */
-        margin-bottom: 10px;
-    }
-    .topnav a:hover,
-    .hortnav a:hover:not(.active), .main-content-2, label , form   {
-        background-color: #45a049;
-    }
-    label,form  { 
-        text-align: center;
-    }
-    
     .main-content-2 {
-        text-align: left;
-        margin-bottom: 20px; /* Add some space between the form and the heading */
+        text-align: center;
+        margin-bottom: 20px;
     }
-    .main-content{
-        border-top: 10px;
-        padding-top: 0;
-    }
+
     .main-content-2 h1 {
-        margin-top: 0; /* Remove default margin on h1 */
+        margin-top: 0;
+    }
+    .code_chunk {
+        padding: 20px;
+        border: 3px solid rebeccapurple;
+        font-size: small;
     }
 }
 
-/* Extra  */ 
-
-body { 
+/* Extra Styles */
+body {
     margin: 0%;
-    background-color:  #333;
-    padding-top: 30px; /* Add padding for the topnav */
+    background-color: #333;
 }
