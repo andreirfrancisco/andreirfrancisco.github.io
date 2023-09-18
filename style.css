@@ -1,186 +1,102 @@
-/* Global Styles */
-* {
-    box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-/* Top Nav Styles */
-.topnav {
-    background-color: #45a049;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.topnav ul {
-    list-style-type: none;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex ;
-}
-
-.topnav li {
-    flex: auto;
-    box-sizing: border-box;
-}
-
-.topnav a {
-    display: block;
-    color: black;
-    text-decoration: none;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-}
-
-.topnav a.active {
-    background-color: crimson;
-}
-
-.topnav a:hover {
-    background-color: crimson;
-}
-
-@media screen and (max-width: 500px) {
-    /* Styles for topnav */
-    .topnav {
-        position: static;
-        width: 100%;
-        background-color: #333;
-        float: none;
-        top:0;
-    }
-
-    .topnav ul {
-        list-style-type: none;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        height: max-content;
-        background-color: #333;
-        position: none;
-        width: 100%;
-        background-color: #333;
-        margin: 0;
-    }
-
-    .topnav li {
-        width: 100%;
-        float: none;
-        text-align: center;
-    }
-
-    .topnav a {
-        width: 100%;
-    }
-
-    .topnav a:hover,
-    .topnav a.active {
-        background-color: crimson;
-    }
-}
-
-/* Main Content Styles */
-
-
-.main-content p, h1 {
-    color: white;
-}
-
-.main-content-2 {
-   width: 50%;
-   float: left;
-   height: max-content;
-}
-
-
-.main-content-2 p, h1 {
-    color: white;
-    text-align: center;
-}
-
-/* Input Styles */
-input[type=text] {
-    width: 100%;
-    padding: 12px 12px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 1px solid #555;
-    outline: none;
-}
-
-input[type=text]:focus {
-    background-color: lightblue;
-}
-
-select {
-    width: 100%;
-    padding: 2% 2%;
-    margin: 4px 0;
-    box-sizing: border-box;
-    border: 1px solid #555;
-    outline: none;
-}
-
-label {
-    color: rgb(23, 112, 105);
-    text-align: center;
-}
-/* At 300 zoom adjust padding */
-.code_chunk {
-    border: 3px solid rebeccapurple;
-    font-size: small;
-    color:aliceblue;
-    height:100%;
-}
-
-/* Button Styles */
-.button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-/* Media Query for Small Screens */
-@media screen and (max-width: 500px) {
-    /* Styles for main-content and main-content-2 */
-    .main-content,
-    .main-content-2 {
-        width: 100%;
-        float: none;
-        margin-left: 0;
-        padding: 10px;
-    }
-
-    .main-content-2 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .main-content-2 h1 {
-        margin-top: 0;
-    }
-    .code_chunk {
-        padding: 20px;
-        border: 3px solid rebeccapurple;
-        font-size: small;
-    }
-}
-
-/* Extra Styles */
 body {
-    margin: 0%;
-    background-color: #333;
+background-color:black;
+font-family :monospace;
+margin:0; 
+}
+.page{
+display:flex; 
+flex-direction: row;
+color:white;
+height: 100%;
+}
+
+/* page */
+/* First Container */
+.Tab{
+width : 4%;
+border: .5px solid white;
+}
+.Tab a{
+    width:max-content;
+}
+
+.active{
+    background-color: aquamarine;
+}
+/*Adjust the space for the tab icons */ 
+.Tab-Icons {
+justify-content:space-around;
+display:flex; 
+flex-direction: column;
+height: 100%;
+}
+.Tab-Icons a:first-child {
+    display:flex; 
+    flex-direction: column;
+    border: 100%;
+    }
+.Tab-Icons a:hover{
+    background-color: yellow;
+}
+.Tab-Icons a {
+    color: white; /* Set the default color for links */
+        text-decoration: none;
+        width : 100%;
+        display:flex; 
+        flex-direction: column;
+        }
+/* Second Container */
+.Subjects{
+width : 16%;
+border: .5px solid white;
+}
+.Sub-Icons{
+    justify-content:space-around;
+    display:flex; 
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+.Sub-Icons a {
+    color: white; /* Set the default color for links */
+        text-decoration: none;
+        width : 100%;
+        display:flex; 
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        }
+.Sub-Icons a:hover {
+    background-color: greenyellow;
+}
+
+.Main{ 
+width : 80%;
+border: .5px solid white;
+}
+.Main-Icons{
+    display:flex; 
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+.Main-Icons h1{
+    background-color: aquamarine;
+    color: black;
+}
+.Main-Icons p{
+    color : white;
+}
+@media screen and (max-width: 500px){ 
+    .page{
+        display:flex; 
+        flex-direction: column;
+        color:white;
+        height: 100%;
+        } 
+        .Tab, .Subjects, .Main
+        {
+        width:100%;
+        }
+
 }
