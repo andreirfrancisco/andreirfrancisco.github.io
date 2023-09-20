@@ -1,57 +1,43 @@
-<html lang = "en"> 
+<html lang="en"> 
     <head> 
-        <link rel="stylesheet" href = "style.css">
+        <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title> CD Python </title>
+        <script src="https://kit.fontawesome.com/01302be984.js" crossorigin="anonymous"></script>
+        <title> CD Python by Andrei Ramir Francisco </title>
+        <script type="module" src="website.js"></script>
+        <script src = "text.js"> </script> 
     </head>   
-<body> 
-<!--
-    Tab Icon
-    IMG_1 = Database Image
-    IMG_2 = Dust Image
-    IMG_3  
--->
-<div class = "page"> 
-        <div class = "Tab">  
-            <div class = "Tab-Icons" >
-                    <a href = "index.html" > My Icon </a> 
-                    <a href = "data.html"> Data </a>
-                    <a href = "clean.html" > Clean</a>
-                    <a href = "vis.hthml" > Vis</a>
-            </div>    
-        </div>
-        <div class = "Subjects">
-            <div class = "Sub-Icons" > 
-                    <a href = "#education" id = "education"> Education</a>
-                    <a href = "#projects" id  = "projects">Projects</a>
-                    <a href = "#skills" id = "skills"> Skills</a>
-                    <a href = "#socials" id = "socials"> Socials</a>
+    <body> 
+        <!--
+        Page is the whole page aka the flex contianer
+        -->
+        <div class="page"> 
+        <!--Tabs users can see -->
+            <div class="Tab">  
+                <div class="Tab-Icons" >
+                    <a > <i id="1" style="color:white; " class="fa-solid fa-user fa-lg"></i></a> 
+                    <a > <i id="2" class="fa-solid fa-database"></i> </a>
+                    <a > <i id="3" class="fa-solid fa-broom fa-rotate-270"></i></a>
+                    <a > <i id="4" class="fa-solid fa-photo-film"></i></a>
+                </div>    
+            </div>
+            <div class="Subjects">
+                <div class="Sub-Icons" > 
+            <!--Second Tabs appears when users clicks on the icons located on the left-->
+                </div>
+            </div>
+             <!--Main Content Displayed that changes after users selects tab-->
+            <div class="Main"> 
+                <div class="Main-Icons">
+                    <!--Based on the id returns with the appropriate text-->
+                    <h1 id="header"> Welcome to Andrei's Website</h1>
+                    <p id="main"> Here You Can Find More About Me, Create MySQL queries, Clean Python data 
+                        and Create dashboard. </p>
+                </div>
             </div>
         </div>
-        <div class = "Main"> 
-            <div class = "Main-Icons">
-            <!--Based on the id returns with the apprioate text-->
-                    <h1 id = "header"></h1>
-                    <p id = "text"> </p>
-            </div>
-        </div>
-</div>
 
+        <!-- Insert JavaScript Here -->
 
-
-<!--
-    Insert JavaScript Here
--->
-<script src = "website.js"> </script>
-
-
-<!--
-    Insert JavaScript Here
--->
-
-<!--
-    Insert JavaScript Here
--->
-
-</body>
+    </body>
 </html>
