@@ -1,20 +1,24 @@
 body {
-background-color:black;
-font-family :monospace;
-margin:0; 
+    margin: 0;
+    margin-bottom: 0;
+    padding: 0;
+    background-color: black;
+    font-family: monospace;
+    height: 100vh;
 }
+
 .page{
 display:flex; 
 flex-direction: row;
-color:white;
-height: 100%;
+color:aquamarine;
+height: 100vh;
 }
 
 /* page */
 /* First Container */
 .Tab{
 width : 4%;
-border: .5px solid white;
+border: .5px solid aquamarine;
 }
 .Tab a{
     width:max-content;
@@ -31,13 +35,15 @@ justify-content:space-around;
 display:flex; 
 flex-direction: column;
 height: 100%;
+
 }
 
 .Tab-Icons a:hover{
-    background-color: aquamarine;
+    background-color: white;
+    
 }
 .Tab-Icons a {
-    color: white; /* Set the default color for links */
+    color: aquamarine; /* Set the default color for links */
         text-decoration: none;
         width : 100%;
         display:flex; 
@@ -52,7 +58,7 @@ AND set width to 80% for the Main
 
 .Subjects{
 width : 0%;
-border: .5px solid white;
+border: .5px solid aquamarine;
 }
 .Sub-Icons{
     overflow-y: hidden;
@@ -62,6 +68,7 @@ border: .5px solid white;
     flex-direction: column;
     height: 100%;
     text-align: center;
+    color:aquamarine
 }
 .Sub-Icons a {
     color: white; /* Set the default color for links */
@@ -74,46 +81,51 @@ border: .5px solid white;
         overflow-y: hidden;
         overflow-x: hidden;
         }
-.Sub-Icons a:hover {
-    background-color: aquamarine;
+.Sub-Icons p:hover {
+    background-color: white;
 }
 /* Third Container */
-.Main{ 
-width : 96%;
-height: 100%;;
-border: .5px solid white;
+
+.header {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between; /* This will push the elements to either side */
+    align-items: center;
 }
-.Main-Icons{
-    display:flex; 
+.button-container {
+    display: flex;
+    float : right;
+}
+.Main {
+    display: flex; 
     flex-direction: column;
-    height: 100%;
+    width: 96%;
+    border: .5px solid aquamarine;
+    background-color: aquamarine;
+    color: black;
+  }
+  .Main-Content{
+    flex: 1;
+    width: 100%;
+    height: 45vh; /* 45% of viewport height */
+}
+.Main-Content h1{
+text-align: center;
+}
+.Main-Code{
+    flex: 1;
+    width: 100%;
+    height: 55vh; /* Remaining height calculation */
     text-align: center;
 }
-.Main-Icons h1{
-    background-color: aquamarine;
-    border-radius: 25px;
-    color: black;
+.Main-Icons{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 100%;
+    text-align: center;
+    border: 2px solid green;
 }
-.Main-Icons p{
-    color : white;
-}
-
-.code_result{
-    visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  border-radius: 2px;
-  padding: 16px;
-  position: fixed;
-  z-index: 1;
-  left: 50%;
-  bottom: 30px;
-  font-size: 17px;
-}
-
 
 /* Third Container */
 @media screen and (max-width: 500px){ 
