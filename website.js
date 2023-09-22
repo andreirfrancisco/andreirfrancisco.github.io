@@ -87,9 +87,5 @@ function displaySub() {
         style_1.style.transition = '0.2s';
     }
 
-    // Initial call to applyStyles
-    applyStyles();
-
-    // Add event listener for changes in media query
-    mediaQuery.addListener(applyStyles);
+  
 }
