@@ -1,25 +1,17 @@
-import { icon_to_sub , sub_to_main , intrdoction} from './text.js';
+import { default_page, icon_to_sub, sub_to_main } from './text.js';
 
-window.onload = function() {
-    const elements = document.querySelectorAll(".header, .Main-Code");
-    const maincontentElement = document.querySelector(".Main-Content");
-  
-    maincontentElement.textContent = "Learn more about Andrei and his 3 projects for data analysis.";
-    maincontentElement.style.textAlign = "center";
-    maincontentElement.style.fontSize = "40px"; // Change the font size to 24 pixels (adjust as needed)
-    elements.forEach(element => {
-        element.textContent = "";
-        element.style.cssText = "text-align: center; justify-content: none; align-items: none; flex: none;";
-    });
+window.onload = function () {
+    let style_1 = document.querySelector('.Tab');
+    let style_2 = document.querySelector('.Subjects');
+    let style_3 = document.querySelector('.Main');
+    default_page();
 }
-//get window.innerwidth to make sure page is full 
 
-document.addEventListener("DOMContentLoaded", function() {
-    // obtain the icons 
+document.addEventListener("DOMContentLoaded", function () {
     const icons = document.querySelectorAll('.Tab-Icons i');
-    // adds clicks to the icons
+
     icons.forEach(icon => {
-        icon.addEventListener("click", function() {
+        icon.addEventListener("click", function () {
             const text = document.querySelector('.Sub-Icons');
             const iconId = parseInt(icon.id);
             if (icon_to_sub.has(iconId)) {
@@ -33,33 +25,48 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+function handleClick(content) {
+    const maincontentElement = document.querySelector(".Main-Content");
 
+    if (content) {
+        maincontentElement.style.opacity = '0';
+        setTimeout(function () {
+            maincontentElement.innerHTML = '';
 
-document.addEventListener("DOMContentLoaded", function() {
-    // obtain the icons 
-    const icons = document.querySelectorAll('.Sub-Icons i');
-    // adds clicks to the icons
-    icons.forEach(icon => {
-        icon.addEventListener("click", function() {
-            const text = document.querySelector('.Sub-Icons');
-            const iconId = parseInt(icon.id);
-            if (sub_to_main.has(iconId)) {
-                const tabs = icon_to_sub.get(iconId);
-                displayTabs(tabs, text);
-                displaySub();
-            } else {
-                text.textContent = "Default Content";
-            }
-        });
-    });
-});
+            content.forEach(item => {
+                const paragraph = document.createElement('p');
+                paragraph.textContent = item;
+                maincontentElement.appendChild(paragraph);
+            });
+
+            maincontentElement.style.opacity = '1';
+        }, 300);
+    }
+}
 
 function displayTabs(tabs, text) {
     let content = "";
     for (let i = 0; i < tabs.length; i++) {
-        content += "<p>" + tabs[i] + "</p>";
+        content += `<p class='clickable' data-index='${i}'>${tabs[i]}</p>`;
     }
+
     text.innerHTML = content;
+
+    const clickableParagraphs = document.querySelectorAll('.clickable');
+
+    clickableParagraphs.forEach(paragraph => {
+        paragraph.addEventListener('click', function () {
+            const clickedTag = paragraph.textContent;
+            const key = Array.from(icon_to_sub.values()).flat().indexOf(clickedTag) + 1;
+
+            if (key > 0) {
+                const content = sub_to_main.get(key);
+                handleClick(content);
+                const headerElement = document.querySelector(".header");
+                headerElement.innerHTML = clickedTag;
+            }
+        });
+    });
 }
 
 function displaySub() {
@@ -68,6 +75,7 @@ function displaySub() {
     if (style_1.style.width === '12%') {
         style_1.style.width = '0';
         style_2.style.width = '96%';
+        default_page();
     } else {
         style_1.style.width = '12%';
         style_2.style.width = '84%';
