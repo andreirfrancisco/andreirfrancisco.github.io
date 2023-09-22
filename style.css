@@ -1,125 +1,139 @@
 body {
     margin: 0;
-    margin-bottom: 0;
     padding: 0;
     background-color: black;
     font-family: monospace;
     height: 100vh;
 }
 
-.page{
-display:flex; 
-flex-direction: row;
-color:aquamarine;
-height: 100vh;
+.page {
+    display: flex;
+    flex-direction: row;
+    color: aquamarine;
+    min-height: 100vh; /* Ensure a minimum height of 100% viewport height */
 }
 
-/* page */
-/* First Container */
-.Tab{
-width : 4%;
-border: .5px solid aquamarine;
+.Tab {
+    width: 4%;
+    border: .5px solid aquamarine;
+    flex-direction: column; /* Added this line */
 }
-.Tab a{
-    width:max-content;
+
+.Tab a {
+    width: max-content;
     text-align: center;
 }
 
-.active{
+.active {
     background-color: aquamarine;
-    
 }
-/*Adjust the space for the tab icons */ 
+
 .Tab-Icons {
-justify-content:space-around;
-display:flex; 
-flex-direction: column;
-height: 100%;
-
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-.Tab-Icons a:hover{
+.Tab-Icons a:hover {
     background-color: white;
-    
 }
-.Tab-Icons a {
-    color: aquamarine; /* Set the default color for links */
-        text-decoration: none;
-        width : 100%;
-        display:flex; 
-        padding-top: 10px;
-        padding-bottom: 10px;
-        flex-direction: column;
-        }
-/* Second Container 
-Set width to width to 16% when user selects an icon
-AND set width to 80% for the Main
-*/
 
-.Subjects{
-width : 0%;
-border: .5px solid aquamarine;
+.Tab-Icons a {
+    color: aquamarine;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-direction: column;
 }
-.Sub-Icons{
-    overflow-y: hidden;
-    overflow-x: hidden;
-    justify-content:space-around;
-    display:flex; 
+
+.Subjects {
+    width: 0%;
+    border: .5px solid aquamarine;
+    flex-direction: column; /* Added this line */
+}
+
+.Sub-Icons {
+    justify-content: space-around;
+    display: flex;
     flex-direction: column;
     height: 100%;
     text-align: center;
-    color:aquamarine
+    color: aquamarine;
 }
+
 .Sub-Icons a {
-    color: white; /* Set the default color for links */
-        text-decoration: none;
-        width : 100%;
-        display:flex; 
-        flex-direction: column;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        overflow-y: hidden;
-        overflow-x: hidden;
-        }
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
 .Sub-Icons p:hover {
     background-color: white;
 }
-/* Third Container */
+
+.header, .Main-Content, .Sub-Icons {
+    width: 100%; /* Make sure these elements take up the full width */
+    margin: 0;
+    padding: 0;
+}
 
 .header {
-    width: 100%;
     height: 5vh;
     display: flex;
-    justify-content: space-between; /* This will push the elements to either side */
-    align-items: center;
+    text-align: center;
+    font-size: 25px;
 }
+
+.header h1 {
+    height: 5vh;
+    display: flex;
+    text-align: center;
+    font-size: 25px;
+}
+
 .button-container {
     display: flex;
-    float : right;
+    float: right;
 }
+
 .Main {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     width: 96%;
     border: .5px solid aquamarine;
     background-color: aquamarine;
     color: black;
-  }
-  .Main-Content{
+}
+
+.Main-Content {
     flex: 1;
     width: 100%;
     height: 45vh; /* 45% of viewport height */
+    transition: opacity 0.2s ease-in-out; /* Add transition for opacity */
+    opacity: 1; /* Set default opacity to 1 */
 }
-.Main-Content h1{
-text-align: center;
+
+.Main-Content h1 {
+    text-align: center;
 }
-.Main-Code{
+
+.Main-Code {
     flex: 1;
     width: 100%;
     height: 55vh; /* Remaining height calculation */
     text-align: center;
 }
-.Main-Icons{
+
+.Main-Icons {
     overflow-y: hidden;
     overflow-x: hidden;
     height: 100%;
@@ -128,16 +142,3 @@ text-align: center;
 }
 
 /* Third Container */
-@media screen and (max-width: 500px){ 
-    .page{
-        display:flex; 
-        flex-direction: column;
-        color:white;
-        height: 100%;
-        } 
-        .Tab, .Subjects, .Main
-        {
-        width:100%;
-        }
-
-}
