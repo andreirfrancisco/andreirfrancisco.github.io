@@ -73,7 +73,8 @@ function displaySub() {
     let style_1 = document.querySelector('.Subjects');
     let style_2 = document.querySelector('.Main');
 
-    let mediaQuery = window.matchMedia('(max-width: 768px)'); // Change the media query to your desired condition
+   
+ // Change the media query to your desired condition
 
     function applyStyles() {
         if (style_1.style.width === '12%') {
