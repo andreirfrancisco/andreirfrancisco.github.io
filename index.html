@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,14 +6,8 @@
     <script src="https://kit.fontawesome.com/01302be984.js" crossorigin="anonymous"></script>
     <title>CD Python by Andrei Ramir Francisco</title>
     <script type="module" src="website.js"></script>
-    <script src="text.js"></script>
+    <script type="module" src="text.js"></script>
     <style>
-        /* Add any additional styles here if needed */
-        .Main-Content,
-        .Main-Code {
-            text-align: center;
-            font-size: 24px; /* Adjust as needed */
-        }
     </style>
 </head>
 
@@ -22,10 +15,10 @@
     <div class="page">
         <div class="Tab">
             <div class="Tab-Icons">
-                <a href="#"><i id="1" class="fa-solid fa-user fa-lg"></i></a>
-                <a href="#"><i id="2" class="fa-solid fa-database"></i></a>
-                <a href="#"><i id="3" class="fa-solid fa-broom fa-rotate-270"></i></a>
-                <a href="#"><i id="4" class="fa-solid fa-photo-film"></i></a>
+                <a><i id="1" class="fa-solid fa-user fa-lg"></i></a>
+                <a><i id="2" class="fa-solid fa-database"></i></a>
+                <a><i id="3" class="fa-solid fa-broom fa-rotate-270"></i></a>
+                <a><i id="4" class="fa-solid fa-photo-film"></i></a>
             </div>
         </div>
         <div class="Subjects">
@@ -36,6 +29,10 @@
         <div class="Main">
             <div class="header">
                 <h1 id="sub">Subject</h1>
+                <!-- <div class="orientation-buttons">
+                    <button onclick="changeOrientation('vertical')">Vertical</button>
+                    <button onclick="changeOrientation('horizontal')">Horizontal</button>
+                </div> -->
             </div>
             <div class="Main-Content">
                 <h1>Main Content</h1>
@@ -45,14 +42,7 @@
                     Here is another page. To make sure that the content does not overflow.
                 </p>
             </div>
-            <div class="Main-Code">
-                <h1>Main Code</h1>
-                <p id="code">
-                    Here is some text that is intended for the main content. Make sure that it does not overflow to
-                    the next content.
-                    Here is another page. To make sure that the content does not overflow.
-                </p>
-            </div>
+        
         </div>
     </div>
 </body>
