@@ -72,13 +72,24 @@ function displayTabs(tabs, text) {
 function displaySub() {
     let style_1 = document.querySelector('.Subjects');
     let style_2 = document.querySelector('.Main');
-    if (style_1.style.width === '12%') {
-        style_1.style.width = '0';
-        style_2.style.width = '96%';
-        default_page();
-    } else {
-        style_1.style.width = '12%';
-        style_2.style.width = '84%';
+
+    let mediaQuery = window.matchMedia('(max-width: 768px)'); // Change the media query to your desired condition
+
+    function applyStyles() {
+        if (style_1.style.width === '12%') {
+            style_1.style.width = '0';
+            style_2.style.width = '96%';
+            default_page();
+        } else {
+            style_1.style.width = '12%';
+            style_2.style.width = '84%';
+        }
+        style_1.style.transition = '0.2s';
     }
-    style_1.style.transition = '0.2s';
+
+    // Initial call to applyStyles
+    applyStyles();
+
+    // Add event listener for changes in media query
+    mediaQuery.addListener(applyStyles);
 }
