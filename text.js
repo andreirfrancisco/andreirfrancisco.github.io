@@ -20,14 +20,14 @@ export const icon_to_sub = new Map([
     [1, ["Education", "Skills", "Projects", "Socials"]],
     [2, ["Database", "Queries", "Conversions", "Update Database"]],
     [3, ["Programs Needed", "Cleaning Data", "Figures", "Model Preparation"]],
-    [4, ["Libraries/Programs Needed", "HTML", "Styles", "Create Dashboard"]]
+    [4, ["Libraries Needed", "HTML", "Styles", "Create Dashboard"]]
 ]);
 
 export const sub_to_main = new Map  ([  
-    [1, ["UCLA Economics B.A", "June 2023" , "Coursera IBM Data Analytics", "August 2023"]],
-    [2, ["Python : 2years", "R:2years", "Tableau:1 year", "Javascript : 2 months", "Microsoft Office : 2 years", "Statistics : 2 years" , "MySQL : 1 year"]],
-    [3, ["Website", "You are looking at Andrei's Website made in September 2023" , "Past Reports such as classification, forecasts, and many other click on github"]],
-    [4, ["MySQL Key 1", "MySQL Key 2", "MySQL Key 3", "MySQL Key 4"]],
+    [1, ["University of California Los Angeles, Economics B.A", "June 2023" , "Coursera IBM Data Analytics", "August 2023"]],
+    [2, ["Python: 2years", "R: 2years", "Tableau: 1 year", "Javascript: 2 months", "Microsoft Office: 2 years", "Statistics : 2 years" , "MySQL : 1 year"]],
+    [3, ["Website", "This website was made with Javacscript, HTML, and CSS. Users can learn more about Andrei and eventually organize Python Dataframes, organize their database, and create dashboard with Python's Library Dash." , " IBM Capstone Project ", "For the IBM Data Analyst Certfication, I was tasked to create a presentation slide. I used Python, IBM Congos Analytics , Microsoft Office Slides and APIs such as BeautifulSoup to obtain the data and create a final project.",  "Past Data Analysis Reports", "During my time at UCLA, I had completed multiple data analysis reports whether it was about multi dimension regression, classification, forecasting, statistical models like Holt Winters, etc. They can be asked upon request."]],
+    [4, ["Github : https://github.com/andreirfrancisco", "Website: https://andreirfrancisco.github.io/ "]],
     [5, ["Cleaning Key 1", "Cleaning Key 2", "Cleaning Key 3", "Cleaning Key 4"]],
     [6, ["Dashboard Key 1", "Dashboard Key 2", "Dashboard Key 3", "Dashboard Key 4"]],
     [7, ["Dashboard Key 5", "Dashboard Key 6", "Dashboard Key 7", "Dashboard Key 8"]],
