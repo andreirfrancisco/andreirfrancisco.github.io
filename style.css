@@ -3,7 +3,6 @@ body {
     padding: 0;
     background-color: black;
     font-family: monospace;
-    height: 100vh;
 }
 
 .page {
@@ -14,15 +13,14 @@ body {
 }
 
 .Tab {
-    width: 4%;
+    flex : .04; 
     border: .5px solid aquamarine;
     flex-direction: column; /* Added this line */
 }
 
 .Tab a {
-    width: max-content;
     text-align: center;
-}
+}margiMi
 
 .active {
     background-color: aquamarine;
@@ -42,7 +40,6 @@ body {
 .Tab-Icons a {
     color: aquamarine;
     text-decoration: none;
-    width: 100%;
     display: flex;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -50,7 +47,7 @@ body {
 }
 
 .Subjects {
-    width: 0%;
+    flex : 0 ; 
     border: .5px solid aquamarine;
     flex-direction: column; /* Added this line */
 }
@@ -67,7 +64,6 @@ body {
 .Sub-Icons a {
     color: white;
     text-decoration: none;
-    width: 100%;
     display: flex;
     flex-direction: column;
     padding-top: 20px;
@@ -79,13 +75,6 @@ body {
 .Sub-Icons p:hover {
     background-color: white;
 }
-
-.header, .Main-Content, .Sub-Icons {
-    width: 100%; /* Make sure these elements take up the full width */
-    margin: 0;
-    padding: 0;
-}
-
 .header {
     height: 5vh;
     display: flex;
@@ -108,16 +97,16 @@ body {
 .Main {
     display: flex;
     flex-direction: column;
-    width: 96%;
+   flex : .96;
     border: .5px solid aquamarine;
     background-color: aquamarine;
     color: black;
 }
-
+p{
+    font-size: 20px;
+}
 .Main-Content {
     flex: 1;
-    width: 100%;
-    height: 45vh; /* 45% of viewport height */
     transition: opacity 0.2s ease-in-out; /* Add transition for opacity */
     opacity: 1; /* Set default opacity to 1 */
 }
@@ -126,19 +115,13 @@ body {
     text-align: center;
 }
 
-.Main-Code {
-    flex: 1;
-    width: 100%;
-    height: 55vh; /* Remaining height calculation */
-    text-align: center;
-}
 
-.Main-Icons {
-    overflow-y: hidden;
-    overflow-x: hidden;
-    height: 100%;
-    text-align: center;
-    border: 2px solid green;
-}
+.box{ 
+    background-color : aquamarine;
+    color : black ;
+    text-align:center;    
+    }
+/* 
+Adding classes for each of the tabs 
 
-/* Third Container */
+*/
