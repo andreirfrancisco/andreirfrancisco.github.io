@@ -1,4 +1,4 @@
-import { icon_to_sub, sub_to_main,dis_edu, dis_skills, filterSkills } from './text.js';
+import { icon_to_sub, sub_to_main,dis_edu, dis_skills, dis_pro, dis_soc} from './text.js';
 
 window.onload = function() {
     window.addEventListener('resize', function(){
@@ -11,6 +11,25 @@ window.onload = function() {
         }
     });
 }
+function filterSkills() {
+    // Declare variables
+    var input, filter, titles, i, txtValue;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    titles = document.querySelectorAll('.skills .title');
+
+    // Loop through all the titles and hide those that don't match the search query
+    titles.forEach(function(title) {
+        txtValue = title.textContent || title.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            title.closest('.skills').style.display = ''; // Show the whole skill block
+        } else {
+            title.closest('.skills').style.display = 'none'; // Hide the whole skill block
+        }
+    });
+  
+}
+document.addEventListener('input', filterSkills);
 document.addEventListener('resize', displaySub);
 // add the event click to the icons in the first page
 document.addEventListener("DOMContentLoaded", function() {
@@ -33,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function handleClick(content) {
-    const maincontentElement = document.querySelector(".Main-Content");
+    const maincontentElement = document.querySelector(".Main");
     console.log("MaincontentElement:", maincontentElement); 
     maincontentElement.style.opacity = '0';
     setTimeout(function() {
@@ -74,11 +93,18 @@ function displayTabs(tabs, text) {
             {
                 dis_skills();
             }
+            else if(key==3)
+            {
+                dis_pro();
+            }
+            else if(key==4){
+                dis_soc();
+            }
             
             else{
                 handleClick(content);
             }
-           
+            headerElement.style.textAlign = "center";
             headerElement.innerHTML = clickedTag;
         });
     });
@@ -92,7 +118,9 @@ function displaySub() {
         if (window.innerWidth < 600) {
             subjects.style.width = '25%';
             main.style.width = '75%';
-        } else {
+        }
+
+        else {
             subjects.style.width = '12%';
             main.style.width = '84%';
         }
