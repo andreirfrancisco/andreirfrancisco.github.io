@@ -1,8 +1,15 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: black;
     font-family: monospace;
+    color : #333;
+    height :0;
+}
+.page,
+.Tab-Icons,
+.Main-Content {
+    margin: 0;
+    padding: 0;
 }
 
 .page {
@@ -10,17 +17,20 @@ body {
     flex-direction: row;
     color: aquamarine;
     min-height: 100vh; /* Ensure a minimum height of 100% viewport height */
+    color : #333;
+  
 }
+
 
 .Tab {
     flex : .04; 
-    border: .5px solid aquamarine;
     flex-direction: column; /* Added this line */
+    border : 1px solid #333;
 }
 
 .Tab a {
     text-align: center;
-}margiMi
+}
 
 .active {
     background-color: aquamarine;
@@ -30,9 +40,11 @@ body {
     justify-content: space-around;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
     overflow-y: hidden;
     overflow-x: hidden;
+
+
 }
 
 .Tab-Icons a:hover {
@@ -40,19 +52,20 @@ body {
 }
 
 .Tab-Icons a {
-    color: aquamarine;
     text-decoration: none;
     display: flex;
     padding-top: 10px;
     padding-bottom: 10px;
     flex-direction: column;
+    color : #333;
+    
 
 }
 
 .Subjects {
     flex : 0 ; 
-    border: .5px solid aquamarine;
     flex-direction: column; /* Added this line */
+    border : 1px solid #333;
 }
 
 .Sub-Icons {
@@ -61,7 +74,9 @@ body {
     flex-direction: column;
     height: 100%;
     text-align: center;
-    color: aquamarine;
+    color : #333;
+
+
 }
 
 .Sub-Icons a {
@@ -79,14 +94,14 @@ body {
     background-color: white;
 }
 .header {
-    height: 5vh;
+
     display: flex;
     text-align: center;
     font-size: 25px;
 }
 
 .header h1 {
-    height: 5vh;
+
     display: flex;
     text-align: center;
     font-size: 25px;
@@ -101,79 +116,83 @@ body {
     display: flex;
     flex-direction: column;
    flex : .96;
-    border: .5px solid aquamarine;
-    background-color: aquamarine;
-    color: black;
+    color: #333;
+    border : 1px solid #333;
 }
 
 .Main-Content {
     flex: 1;
     transition: opacity 0.2s ease-in-out; /* Add transition for opacity */
     opacity: 1; /* Set default opacity to 1 */
+
 }
 
 .Main-Content h1 {
     text-align: center;
 }
-/* Images */
-
+/* Education css*/
 .flex {
     display: flex;
-    border: 5px solid #333;
+    flex-direction: column;
 }
 
 .image {
-    flex: .8;
+
+    max-height: 250px ;/* Added to ensure the image doesn't exceed container height */
+    overflow: hidden; /* Added to prevent image overflow */
+    text-align: center;
+    
 }
 
 .image img {
-    max-width: 100%;
-}
-.img svg{
-    max-width: 100%;
+    max-width: 30%;
 }
 
 .box {
     display: flex;
     flex-direction: column;
     text-align: center;
+   
 }
 
-.icon { 
-    padding: 20px;
-    border: 2px solid aquamarine;
+.icon {
+    padding: 10px;
+    flex: 1; /* Each icon takes 50% of the height */
 }
+
 .searchbar {
     border-radius: 25px;
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
-    width: 30%;
-  }
+    width: 70%; /* Changed to 70% for better visibility */
+    margin: 10px auto; /* Center the search bar */
+}
 
-  .field {
+.field {
     text-align: center;
-  }
+    flex: 1; /* Each field takes 50% of the height */
+}
 
-  .skill_box {
+/* For skills css */
+.skill_box {
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
-  }
-
-/* Existing styles remain the same */
-
+    flex: 1; /* Each skill box takes 50% of the height */
+    
+}
 .skills {
-  border: 2px solid green;
+    text-align: center;
+  border: 2px solid #333;
   border-radius: 20px;
-  padding: 10px; /* Add padding for some space inside the border */
-  margin-bottom: 10px; /* Add some space between each skill */
+    padding: 10px;
+  margin-bottom: 15px; /* Add some space between each skill */
 }
 
 .title {
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.2e;
   margin-bottom: 5px;
 }
 
@@ -186,4 +205,32 @@ body {
     background-color: #333;
     color : white;
 }
+/* For projects css*/
 
+ .pro_box {
+        display: flex;
+        flex-direction: column;
+        flex: 1; 
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px;
+        text-align: center;
+    }
+    .pro img {
+        min-height: 50px;
+        min-width: 50px;
+    }
+    .pro_img {
+        border: 2px solid #333;
+        min-height: 50px;
+        min-width: 50px;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .frame {
+        border-radius: 25px;
+        border: 2px solid #333;
+        padding: 10px;
+        margin: 10px;
+    }
