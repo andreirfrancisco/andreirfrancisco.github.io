@@ -31,11 +31,11 @@ export const sub_to_main = new Map  ([
     [16, ["Coming Soon Feature", "Expected October"]]
     ]);
 export function dis_edu(){ 
-    const main_content_Element = document.querySelector(".Main-Content");
+    const main_content_Element = document.querySelector(".Main");
     main_content_Element.innerHTML = "<br>";
 
     const newContent = `
-    <br>
+<br>
     <div class="flex"> 
         <div class="image"> 
             <img src="image/ucla.jpg" alt="UCLA Image">
@@ -48,8 +48,9 @@ export function dis_edu(){
                 B.A Economics , University of California, Los Angeles
             </div>
         </div>
+        <br>
     </div>
-    <br>
+   
     <div class="flex"> 
     <div class="image"> 
         <img src="image/coursera.svg" alt="UCLA Image">
@@ -64,30 +65,14 @@ export function dis_edu(){
     </div>
 
     `;
-    
     main_content_Element.innerHTML = newContent;
+    main_content_Element.style.opacity = 1; // Fade in content
     
-}
-export function filterSkills() {
-    // Declare variables
-    var input, filter, titles, i, txtValue;
-    input = document.getElementById('myInput');
-    filter = input.value.toUpperCase();
-    titles = document.querySelectorAll('.skills .title');
-
-    // Loop through all the titles and hide those that don't match the search query
-    titles.forEach(function(title) {
-        txtValue = title.textContent || title.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            title.closest('.skills').style.display = ''; // Show the whole skill block
-        } else {
-            title.closest('.skills').style.display = 'none'; // Hide the whole skill block
-        }
-    });
+    
 }
 
 export function dis_skills(){ 
-    const main_content_Element = document.querySelector(".Main-Content");
+    const main_content_Element = document.querySelector(".Main");
     main_content_Element.innerHTML = "<br>";
 
     const newContent = ` <div class="field">
@@ -129,6 +114,73 @@ export function dis_skills(){
     </div>
   </div>
   `;
-    main_content_Element.innerHTML = newContent;
+  main_content_Element.innerHTML = newContent;
+  main_content_Element.style.opacity = 1; // Fade in content
     
+}
+
+export function dis_pro(){
+    const main_content_Element = document.querySelector(".Main");
+    main_content_Element.innerHTML = "<br>";
+    const newContent = `
+    <br> 
+    <div class="frame"> 
+    <div class="pro_img"> 
+        <a href="https://github.com/andreirfrancisco" target="_blank">
+            How this website was built.
+        </a>
+    </div>
+    <div class="pro_box"> 
+        Skills : Javascript, HTML , and CSS.
+    </div>
+    <div class="pro_box"> 
+        Date : September 2023
+    </div>
+</div>
+<div class="frame"> 
+<div class="pro_img"> 
+    <a href="https://docs.google.com/presentation/d/1oxvXJtceky21h1-zs5y9KcQIDX-Sv1yP9fxO0vXh0yU/edit?usp=sharing" target="_blank">
+        Capstone Project IBM Presentation. 
+    </a>
+</div>
+<div class="pro_box"> 
+    Skills : Python, IBM Cognos Analytics, and Python libraries like BeautifulSoup. 
+</div>
+<div class="pro_box"> 
+    Date : August 2023
+</div>
+</div>
+    
+<div class="frame"> 
+<div class="pro_img"> 
+    <a href = "https://docs.google.com/document/d/1fFsBu8KaviS6msfPV1xO7guidoMJjW7E-7PYepWScZ8/edit?usp=sharing" target = "_blank" >
+       Past Data Reports done at UCLA. Example done with a group. 
+    </a>
+</div>
+<div class="pro_box"> 
+    Languages : R w/Libraries like Tidyverse, Forecast, and ggplot2.
+</div>
+<div class="pro_box"> 
+    Ask upon request.
+</div>
+</div>
+    
+    `;
+
+    main_content_Element.style.opacity = 1; // Fade in content
+    main_content_Element.innerHTML = newContent;
+}
+
+// add image website.png to the img and it links to https://andreirfrancisco.github.io/
+
+export function  dis_soc(){
+    const main_content_Element = document.querySelector(".Main");
+    main_content_Element.innerHTML = "<br>";
+    const newContent = `<a href = " https://github.com/andreirfrancisco" target = "_blank" style = "text-align:center"> Github</a>
+    <br> 
+    <a href = " https://andreirfrancisco.github.io/" target = "_blank"  style = "text-align:center"> Webiste </a> 
+    
+    `;
+    main_content_Element.style.opacity = 1; // Fade in content
+    main_content_Element.innerHTML = newContent;
 }
