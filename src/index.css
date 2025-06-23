@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@keyframes slide-in-left {
+from {
+transform: translateX(-100%);
+opacity: 0;
+}
+to {
+transform: translateX(0);
+opacity: 1;
+}
+}
+@keyframes slide-in-right {
+from {
+transform: translateX(100%);
+opacity: 0;
+}
+to {
+transform: translateX(0);
+opacity: 1;
+}
+}
+@keyframes slide-in-up {
+from {
+transform: translateY(100%);
+opacity: 0;
+}
+to {
+transform: translateY(0);
+opacity: 1;
+}
+}
+@keyframes slide-in-down {
+from {
+transform: translateY(-100%);
+opacity: 0;
+}
+to {
+transform: translateY(0);
+opacity: 1;
+}
+}
+@keyframes slide-in-bottom-left {
+from {
+transform: translate(-100%, 100%);
+opacity: 0;
+}
+to {
+transform: translate(0, 0);
+opacity: 1;
+}
+}
+@keyframes slide-in-top-right {
+from {
+transform: translate(100%, -100%);
+opacity: 0;
+}
+to {
+transform: translate(0, 0);
+opacity: 1;
+}
+}
+.animate-slide-in-left {
+animation: slide-in-left 0.5s ease-out;
+}
+.animate-slide-in-right {
+animation: slide-in-right 0.5s ease-out;
+}
+.animate-slide-in-up {
+animation: slide-in-up 0.5s ease-out;
+}
+.animate-slide-in-down {
+animation: slide-in-down 0.5s ease-out;
+}
+.animate-slide-in-bottom-left {
+animation: slide-in-bottom-left 0.5s ease-out;
+}
+.animate-slide-in-top-right {
+animation: slide-in-top-right 0.5s ease-out;
+}
